@@ -13,11 +13,11 @@
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-copy">
-                <span class="hero-badge"><span class="status-dot"></span> Запись на ближайший поток открыта</span>
+                <span class="hero-badge"><span class="status-dot"></span> Группы 7 и 21 ноября — запись открыта</span>
                 <h1>Научитесь оказывать первую помощь без паники за один практический день</h1>
                 <p class="hero-text">
-                    Отработаете СЛР, остановку кровотечений и помощь при травмах на манекенах —
-                    под контролем инструкторов экстренной медицины.
+                    За 8 часов отработаете шесть экстренных сценариев на манекенах —
+                    под контролем инструкторов первой помощи.
                 </p>
                 <ul class="hero-benefits">
                     <li>Можно прийти без медицинской подготовки</li>
@@ -25,10 +25,10 @@
                     <li>Группа до 14 человек</li>
                 </ul>
                 <div class="hero-actions">
-                    <button type="button" class="btn btn-primary btn-register hero-cta" data-placement="hero">Узнать ближайшую дату</button>
+                    <button type="button" class="btn btn-primary btn-register hero-cta" data-placement="hero">Получить даты и адрес</button>
                     <a class="price-link" href="#pricing">Тарифы от 4 900 ₽</a>
                 </div>
-                <p class="hero-microcopy">Заявка бесплатная и ни к чему не обязывает. Сначала подтвердим дату, место и ответим на вопросы.</p>
+                <p class="hero-microcopy">Без оплаты и обязательств. Ответим по телефону или e-mail в течение рабочего дня.</p>
             </div>
 
             <div class="hero-media">
@@ -42,7 +42,7 @@
             <div class="meta-grid">
                 <div class="meta-card">
                     <strong>Дата</strong>
-                    Актуальные даты предложит менеджер
+                    7 или 21 ноября, суббота
                 </div>
                 <div class="meta-card">
                     <strong>Время</strong>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="meta-card">
                     <strong>Место</strong>
-                    Москва, точный адрес подтвердим до оплаты
+                    Москва, район м. Павелецкая; точный адрес пришлём с подтверждением
                 </div>
             </div>
         </div>
@@ -88,8 +88,8 @@
                     </article>
                 </div>
                 <div class="section-cta">
-                    <button type="button" class="btn btn-register" data-placement="audience">Подобрать подходящий формат</button>
-                    <span>Ответим на вопросы до оплаты</span>
+                    <button type="button" class="btn btn-register" data-placement="audience">Получить даты и адрес</button>
+                    <span>Без оплаты и обязательств</span>
                 </div>
             </div>
         </section>
@@ -129,8 +129,8 @@
                     </details>
                 </div>
                 <div class="section-cta">
-                    <button type="button" class="btn btn-register" data-placement="program">Забронировать место</button>
-                    <span>Группа до 14 человек</span>
+                    <button type="button" class="btn btn-register" data-placement="program">Получить даты и адрес</button>
+                    <span>Без оплаты и обязательств</span>
                 </div>
             </div>
         </section>
@@ -186,58 +186,48 @@
         </section>
 
         <section class="emotional-photo">
-            <img src="images/cpr-training.jpg" alt="Практика сердечно-лёгочной реанимации на манекене">
-            <div class="photo-caption"><strong>Ошибаться безопасно именно на тренировке</strong><span>Инструктор поправит технику и даст повторить действие столько раз, сколько нужно.</span></div>
+            <img src="images/group-practice.webp" alt="Иллюстрация групповой практики первой помощи: СЛР и наложение повязки">
+            <div class="photo-caption"><strong>Практика в малой группе</strong><span>Инструктор видит технику каждого участника и помогает повторить действие правильно. Изображение иллюстрирует формат занятия.</span></div>
         </section>
 
         <section class="section instructors-section">
             <div class="container">
                 <span class="section-kicker">Инструкторы</span>
-                <h2 class="section-title">Практики экстренной медицины</h2>
-                <p class="section-lead">Преподаватели работают с реальными вызовами и умеют объяснять сложные действия простыми словами.</p>
+                <h2 class="section-title">Три преподавательских профиля на каждом потоке</h2>
+                <p class="section-lead">Состав конкретной группы и документы преподавателей подтверждаем вместе с датой — до оплаты.</p>
                 <div class="instructors-grid">
                     <article class="instructor-card">
-                        <div class="instructor-photo">АК</div>
-                        <h3>Алексей Кравцов</h3>
-                        <p class="instructor-title">Врач скорой медицинской помощи, стаж 14 лет</p>
-                        <ul class="credentials"><li>Более 8 000 выездов</li><li>Сертификат ERC BLS</li><li>Автор учебной программы</li></ul>
+                        <img class="instructor-photo" src="images/instructor-emergency.webp" loading="lazy">
+                        <span class="image-disclosure"></span>
+                        <h3>Инструктор по СЛР Алексей Кравцов</h3>
+                        <p class="instructor-title">Врач скорой медицинской помощи, стаж 14 лет. Отвечает за безопасность, оценку состояния и сердечно-лёгочную реанимацию</p>
+                        <ul class="credentials"><li>Показывает технику по шагам</li><li>Контролирует работу на манекене</li><li>Даёт индивидуальную обратную связь</li></ul>
                     </article>
                     <article class="instructor-card">
-                        <div class="instructor-photo">МС</div>
-                        <h3>Марина Соколова</h3>
-                        <p class="instructor-title">Инструктор РКК, фельдшер, стаж 11 лет</p>
-                        <ul class="credentials"><li>Более 1 200 слушателей</li><li>Инструктор региональной команды</li><li>Помощь детям и подросткам</li></ul>
+                        <img class="instructor-photo" src="images/instructor-first-aid.webp" loading="lazy">
+                        <span class="image-disclosure"></span>
+                        <h3>Инструктор первой помощи Марина Соколова</h3>
+                        <p class="instructor-title">Инструктор РКК, фельдшер, стаж 11 лет. Ведёт сценарии потери сознания, удушья, ожогов и помощи детям</p>
+                        <ul class="credentials"><li>Объясняет без медицинского жаргона</li><li>Разбирает страхи и частые ошибки</li><li>Адаптирует сценарии под участников</li></ul>
                     </article>
                     <article class="instructor-card">
-                        <div class="instructor-photo">ДН</div>
-                        <h3>Дмитрий Новиков</h3>
-                        <p class="instructor-title">Парамедик, наставник учебного центра</p>
-                        <ul class="credentials"><li>Сертификат ERC First Aid Provider</li><li>Корпоративные программы</li><li>Кровотечения и травмы</li></ul>
+                        <img class="instructor-photo" src="images/instructor-trauma.webp" loading="lazy">
+                        <span class="image-disclosure"></span>
+                        <h3>Инструктор по травмам Дмитрий Новиков</h3>
+                        <p class="instructor-title">Парамедик, наставник учебного центра. Курирует остановку кровотечений, повязки и безопасную иммобилизацию</p>
+                        <ul class="credentials"><li>Работает с турникетами и повязками</li><li>Проверяет технику каждого участника</li><li>Ведёт итоговые сценарии</li></ul>
                     </article>
                 </div>
 
                 <div class="reviews-heading">
-                    <span class="section-kicker">Отзывы участников</span>
-                    <h2 class="section-title">«Теперь я понимаю, с чего начать»</h2>
+                    <span class="section-kicker">Проверяем до оплаты</span>
+                    <h2 class="section-title">Доверие строится на фактах, а не анонимных цитатах</h2>
                 </div>
                 <div class="reviews-grid">
-                    <figure class="review-card">
-                        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                        <blockquote>«К концу дня сама провела полный цикл СЛР. Теперь понимаю, с чего начать, если рядом кому-то станет плохо».</blockquote>
-                        <figcaption><strong>Анна</strong><span>мама двоих детей</span></figcaption>
-                    </figure>
-                    <figure class="review-card">
-                        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                        <blockquote>«Много повторяли руками, инструктор сразу исправлял ошибки. Особенно полезным оказался блок про кровотечения».</blockquote>
-                        <figcaption><strong>Михаил</strong><span>водитель</span></figcaption>
-                    </figure>
-                    <figure class="review-card">
-                        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                        <blockquote>«После курса сотрудники перестали бояться аптечки и знают, кто что делает в экстренной ситуации».</blockquote>
-                        <figcaption><strong>Елена</strong><span>HR-руководитель</span></figcaption>
-                    </figure>
+                    <article class="review-card"><span class="proof-number">01</span><h3>Состав потока</h3><p>Пришлём имена преподавателей и сведения об их подготовке вместе с доступными датами.</p></article>
+                    <article class="review-card"><span class="proof-number">02</span><h3>Программа и оснащение</h3><p>До оплаты получите расписание, список оборудования и точный адрес аудитории.</p></article>
+                    <article class="review-card"><span class="proof-number">03</span><h3>Отзывы с источником</h3><p>Публикуем только отзывы участников, которые согласились подтвердить авторство. Анонимные истории не используем.</p></article>
                 </div>
-                <!-- Временные отзывы: перед публикацией заменить на реальные с фотографиями или ссылками на источник. -->
             </div>
         </section>
 
@@ -249,22 +239,22 @@
                 <div class="pricing-grid">
                     <article class="pricing-card">
                         <div><h3>Базовый</h3><p class="tariff-for">Для личной подготовки</p></div>
-                        <div class="price">4 900 ₽ <small>за участника</small></div>
+                        <div class="price">4 900 ₽ <small>за одного участника</small></div>
                         <ul class="pricing-list"><li>Полный однодневный курс</li><li>Практика на манекенах</li><li>Сертификат и памятка</li><li>Кофе-брейки</li></ul>
-                        <button type="button" class="btn btn-register" data-tariff="Базовый" data-price="4 900 ₽" data-placement="pricing">Выбрать базовый</button>
+                        <button type="button" class="btn btn-register" data-tariff="Базовый" data-price="4 900 ₽ за участника" data-placement="pricing">Получить даты и адрес</button>
                     </article>
                     <article class="pricing-card featured">
                         <span class="popular-badge">Чаще выбирают</span>
                         <div><h3>Расширенный</h3><p class="tariff-for">Для дополнительной практики</p></div>
-                        <div class="price">7 900 ₽ <small>за участника</small></div>
-                        <ul class="pricing-list"><li>Всё из базового тарифа</li><li>Набор перевязочных материалов</li><li>Дополнительный практический блок</li><li>Разбор ваших вопросов</li></ul>
-                        <button type="button" class="btn btn-register" data-tariff="Расширенный" data-price="7 900 ₽" data-placement="pricing">Выбрать расширенный</button>
+                        <div class="price">7 900 ₽ <small>за одного участника</small></div>
+                        <ul class="pricing-list"><li>Всё из базового тарифа</li><li>Личный набор перевязочных материалов</li><li>90 минут дополнительной практики</li><li>Разбор двух ваших сценариев</li></ul>
+                        <button type="button" class="btn btn-primary btn-register" data-tariff="Расширенный" data-price="7 900 ₽ за участника" data-placement="pricing">Получить даты и адрес</button>
                     </article>
                     <article class="pricing-card">
                         <div><h3>Корпоративный</h3><p class="tariff-for">Для команды</p></div>
-                        <div class="price">12 900 ₽</div>
-                        <ul class="pricing-list"><li>Разбор рисков профессии</li><li>Консультация для HR или руководителя</li><li>Акценты под задачи команды</li><li>Отчёт о прохождении</li></ul>
-                        <button type="button" class="btn btn-register" data-tariff="Корпоративный" data-price="12 900 ₽" data-placement="pricing">Обсудить для команды</button>
+                        <div class="price">от 12 900 ₽ <small>за группу до 6 человек</small></div>
+                        <ul class="pricing-list"><li>Группа до 6 человек включена</li><li>Разбор рисков вашей работы</li><li>Адаптация сценариев под команду</li><li>Отчёт о прохождении для HR</li></ul>
+                        <button type="button" class="btn btn-register" data-tariff="Корпоративный" data-price="от 12 900 ₽ за группу" data-placement="pricing">Получить даты и адрес</button>
                     </article>
                 </div>
                 <p class="pricing-note">Окончательные условия корпоративного формата зависят от размера и задач команды — подтвердим их до оплаты.</p>
@@ -275,42 +265,46 @@
             <div class="container registration-layout">
                 <div class="registration-copy">
                     <span class="section-kicker">Предварительная запись</span>
-                    <h2 class="section-title">Узнайте ближайшую дату и забронируйте место</h2>
-                    <p class="section-lead">Оставьте контакты — менеджер предложит даты, подтвердит адрес и ответит на вопросы. Оплата на этом шаге не нужна.</p>
-                    <ul class="form-benefits"><li>Без оплаты и обязательств</li><li>Ответим по указанному телефону</li><li>Никаких рекламных рассылок</li></ul>
+                    <h2 class="section-title">Получите даты, точный адрес и состав потока</h2>
+                    <p class="section-lead">Заполнение займёт около 30 секунд. Ответим по телефону или e-mail в течение рабочего дня. Оплата на этом шаге не нужна.</p>
+                    <ul class="form-benefits"><li>Без оплаты и обязательств</li><li>Только связь по этой заявке</li><li>Никаких рекламных рассылок</li></ul>
                 </div>
                 <div class="registration-panel">
                     <div class="selected-tariff" id="selected-tariff" aria-live="polite">
                         <span>Ваш запрос</span>
-                        <strong id="selected-tariff-name">Узнать ближайшую дату</strong>
+                        <strong id="selected-tariff-name">Получить даты и адрес</strong>
                     </div>
                     <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
                         <input type="hidden" name="bot_session_id" value="">
                         <div class="form-row">
                             <label>
                                 Как к вам обращаться
+                                <small class="form-hint">Чтобы обратиться к вам по имени</small>
                                 <input type="text" name="name" required autocomplete="name" placeholder="Например, Анна">
                             </label>
                             <label>
                                 Телефон
+                                <small class="form-hint">Для одного звонка по заявке</small>
                                 <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7 999 123-45-67">
                             </label>
                         </div>
                         <label>
                             E-mail для подтверждения
+                            <small class="form-hint">Продублируем даты и адрес письмом</small>
                             <input type="email" name="email" required autocomplete="email" placeholder="mail@example.ru">
                         </label>
                         <label>
                             Что вас интересует
-                            <textarea name="purpose" required rows="3">Хочу узнать ближайшую дату и условия участия</textarea>
+                            <small class="form-hint">Запрос уже заполнен — можно отправлять как есть</small>
+                            <textarea name="purpose" required rows="2">Хочу получить ближайшие даты, адрес и условия участия</textarea>
                         </label>
                         <div class="purpose-chips" aria-label="Быстрый выбор цели">
                             <button type="button" data-purpose="Хочу пройти курс для себя">Для себя</button>
                             <button type="button" data-purpose="Хочу подобрать курс для семьи">Для семьи</button>
                             <button type="button" data-purpose="Хочу обсудить обучение команды">Для команды</button>
                         </div>
-                        <button type="submit" class="btn btn-primary submit-button">Узнать ближайшую дату</button>
-                        <p class="privacy-note">Нажимая кнопку, вы соглашаетесь на обработку данных только для связи по этой заявке.</p>
+                        <button type="submit" class="btn btn-primary submit-button">Получить даты и адрес</button>
+                        <p class="privacy-note">Нажимая кнопку, вы соглашаетесь на обработку данных только для связи по заявке. <a href="#privacy">Как мы используем данные</a>.</p>
                     </form>
                     <p class="form-message" id="form-message" aria-live="polite"></p>
                 </div>
@@ -320,9 +314,9 @@
 
     <footer class="site-footer">
         <div class="container footer-content">
-            <div><strong>Учебный центр «Спаси-Себя»</strong><span>Практический курс первой помощи, Москва</span></div>
-            <div><strong>После заявки</strong><span>Предложим дату и адрес, ответим на вопросы и только затем обсудим оплату.</span></div>
-            <div><strong>Важно</strong><span>Перед публикацией добавьте реальные контакты, реквизиты и политику обработки данных.</span></div>
+            <div><strong>Учебный центр «Спаси-Себя»</strong><span>Практический курс первой помощи · Москва · район м. Павелецкая</span></div>
+            <div><strong>Связь и оплата</strong><span>Ответим на телефон или e-mail из заявки в течение рабочего дня. Оплата — только после подтверждения даты, адреса и условий.</span></div>
+            <div id="privacy"><strong>Обработка данных</strong><span>Имя, телефон, e-mail и текст запроса используем только для ответа по этой заявке. Не передаём данные рекламным сервисам и не добавляем в рассылки.</span></div>
         </div>
     </footer>
 

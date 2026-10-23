@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedTariffName = document.getElementById('selected-tariff-name');
     let formStarted = false;
 
+    if (registrationSection && 'IntersectionObserver' in window) {
+        const registrationObserver = new IntersectionObserver(([entry]) => {
+            document.body.classList.toggle('registration-in-view', entry.isIntersecting);
+        }, { threshold: 0.08 });
+
+        registrationObserver.observe(registrationSection);
+    }
+
     const trackEvent = (eventName, params = {}) => {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: eventName, ...params });
@@ -38,12 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const purpose = form.elements.namedItem('purpose');
 
             if (tariff && purpose instanceof HTMLTextAreaElement) {
-                purpose.value = `Интересует тариф «${tariff}» (${price}). Хочу узнать ближайшую дату и условия участия.`;
+                purpose.value = `Интересует тариф «${tariff}» (${price}). Хочу получить даты, адрес и условия участия.`;
                 if (selectedTariffName) {
                     selectedTariffName.textContent = `${tariff} — ${price}`;
                 }
             } else if (selectedTariffName) {
-                selectedTariffName.textContent = 'Узнать ближайшую дату';
+                selectedTariffName.textContent = 'Получить даты и адрес';
             }
 
             trackEvent(tariff ? 'pricing_cta' : 'cta_click', { tariff, price, placement });
@@ -119,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             form.reset();
             formStarted = false;
             if (selectedTariffName) {
-                selectedTariffName.textContent = 'Узнать ближайшую дату';
+                selectedTariffName.textContent = 'Получить даты и адрес';
             }
         } catch (error) {
             const errorText = error instanceof DOMException && error.name === 'AbortError'
@@ -135,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.clearTimeout(timeoutId);
             if (submitButton instanceof HTMLButtonElement) {
                 submitButton.disabled = false;
-                submitButton.textContent = 'Узнать ближайшую дату';
+                submitButton.textContent = 'Получить даты и адрес';
             }
         }
     });

@@ -272,9 +272,8 @@ textarea:focus-visible {
 
 .instructors-grid { grid-template-columns: repeat(3, 1fr); }
 .instructor-card { padding: 27px; text-align: center; }
-.instructor-photo { width: 92px; height: 92px; display: grid; place-items: center; margin: 0 auto 16px; border-radius: 50%; color: var(--ink); background: #cce8f2; font-size: 1.65rem; font-weight: 900; }
-.instructor-card:nth-child(2) .instructor-photo { background: #d9efe4; }
-.instructor-card:nth-child(3) .instructor-photo { background: #f7dfca; }
+.instructor-photo { width: 112px; height: 112px; display: block; margin: 0 auto 8px; border: 4px solid var(--brand-soft); border-radius: 50%; object-fit: cover; object-position: center 20%; box-shadow: 0 10px 28px rgba(23, 48, 66, 0.14); }
+.image-disclosure { display: block; margin-bottom: 13px; color: var(--muted); font-size: 0.72rem; }
 .instructor-card h3 { margin: 0 0 5px; }
 .instructor-title { min-height: 45px; margin: 0 0 13px; color: var(--muted); font-size: 0.9rem; }
 .credentials { margin: 0; padding: 0; list-style: none; text-align: left; }
@@ -284,10 +283,9 @@ textarea:focus-visible {
 .reviews-heading .section-title { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
 .reviews-grid { grid-template-columns: repeat(3, 1fr); }
 .review-card { display: flex; flex-direction: column; margin: 0; padding: 25px; background: var(--surface-soft); }
-.stars { color: #d97d28; letter-spacing: 0.08em; }
-.review-card blockquote { margin: 16px 0 22px; }
-.review-card figcaption { display: grid; gap: 2px; margin-top: auto; }
-.review-card figcaption span { color: var(--muted); font-size: 0.84rem; }
+.review-card h3 { margin: 12px 0 8px; }
+.review-card p { margin: 0; color: var(--muted); }
+.proof-number { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 10px; color: var(--brand-dark); background: var(--brand-soft); font-size: 0.76rem; font-weight: 900; }
 
 .pricing-section { background: var(--surface-soft); }
 .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
@@ -317,14 +315,16 @@ textarea:focus-visible {
 .form-grid { display: grid; gap: 15px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .form-grid label { display: grid; gap: 6px; color: var(--ink); font-weight: 750; }
+.form-hint { margin-top: -3px; color: var(--muted); font-size: 0.75rem; font-weight: 500; }
 .form-grid input:not([type="hidden"]),
 .form-grid textarea { width: 100%; padding: 12px 14px; border: 1px solid #c9d8d4; border-radius: 10px; color: var(--ink); background: #fff; }
-.form-grid textarea { min-height: 84px; resize: vertical; }
+.form-grid textarea { min-height: 68px; resize: vertical; }
 .purpose-chips { display: flex; gap: 7px; flex-wrap: wrap; }
 .purpose-chips button { padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--brand-dark); background: #fff; font-size: 0.78rem; }
 .purpose-chips button:hover { background: var(--brand-soft); }
 .submit-button { width: 100%; }
 .privacy-note { margin: -4px 0 0; color: var(--muted); font-size: 0.75rem; text-align: center; }
+.privacy-note a { color: var(--brand-dark); font-weight: 750; text-underline-offset: 3px; }
 .form-message { min-height: 24px; margin: 13px 0 0; font-weight: 700; text-align: center; }
 .form-message.success { color: var(--success); }
 .form-message.error { color: var(--danger); }
@@ -392,6 +392,13 @@ textarea:focus-visible {
         width: calc(100% - 20px) !important;
         min-height: 54px;
         box-shadow: 0 14px 35px rgba(5, 94, 89, 0.4);
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .registration-in-view .hero-cta {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(calc(100% + 18px));
     }
 }
 
