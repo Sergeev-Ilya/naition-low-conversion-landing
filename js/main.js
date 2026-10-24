@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const registrationSection = document.getElementById('registration');
+    const pricingSection = document.getElementById('pricing');
+    const registrationPanel = document.querySelector('.registration-panel');
     const form = document.getElementById('registration-form');
     const message = document.getElementById('form-message');
     const registerButtons = document.querySelectorAll('.btn-register');
@@ -7,12 +9,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedTariffName = document.getElementById('selected-tariff-name');
     let formStarted = false;
 
+    const updateMobileCta = () => {
+        const meaningfulScroll = window.scrollY > Math.max(360, window.innerHeight * 0.65);
+        document.body.classList.toggle('show-mobile-cta', meaningfulScroll);
+    };
+
+    updateMobileCta();
+    window.addEventListener('scroll', updateMobileCta, { passive: true });
+
     if (registrationSection && 'IntersectionObserver' in window) {
         const registrationObserver = new IntersectionObserver(([entry]) => {
             document.body.classList.toggle('registration-in-view', entry.isIntersecting);
         }, { threshold: 0.08 });
 
         registrationObserver.observe(registrationSection);
+    }
+
+    if (pricingSection && 'IntersectionObserver' in window) {
+        const pricingObserver = new IntersectionObserver(([entry]) => {
+            document.body.classList.toggle('pricing-in-view', entry.isIntersecting);
+        }, { threshold: 0.08 });
+
+        pricingObserver.observe(pricingSection);
     }
 
     const trackEvent = (eventName, params = {}) => {
@@ -46,16 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const purpose = form.elements.namedItem('purpose');
 
             if (tariff && purpose instanceof HTMLTextAreaElement) {
-                purpose.value = `Интересует тариф «${tariff}» (${price}). Хочу получить даты, адрес и условия участия.`;
+                purpose.value = `Интересует тариф «${tariff}» (${price}). Хочу забронировать место без оплаты и получить подтверждение условий.`;
                 if (selectedTariffName) {
                     selectedTariffName.textContent = `${tariff} — ${price}`;
                 }
             } else if (selectedTariffName) {
-                selectedTariffName.textContent = 'Получить даты и адрес';
+                selectedTariffName.textContent = 'Забронировать место без оплаты';
             }
 
             trackEvent(tariff ? 'pricing_cta' : 'cta_click', { tariff, price, placement });
-            registrationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const scrollTarget = window.matchMedia('(max-width: 700px)').matches && registrationPanel
+                ? registrationPanel
+                : registrationSection;
+            scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 
@@ -67,6 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 purpose.value = button.dataset.purpose || '';
                 purpose.focus();
             }
+            purposeButtons.forEach((item) => {
+                const isActive = item === button;
+                item.classList.toggle('is-active', isActive);
+                item.setAttribute('aria-pressed', String(isActive));
+            });
             trackEvent('purpose_selected', { purpose: button.dataset.purpose || '' });
         });
     });
@@ -120,14 +146,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             trackEvent('submit_success');
             if (message) {
-                message.textContent = 'Готово! Заявка принята. Мы свяжемся с вами и предложим ближайшие даты.';
+                message.textContent = 'Готово! Заявка принята. Мы подтвердим дату и условия — оплачивать сейчас ничего не нужно.';
                 message.className = 'form-message success';
             }
 
             form.reset();
+            purposeButtons.forEach((button) => {
+                button.classList.remove('is-active');
+                button.setAttribute('aria-pressed', 'false');
+            });
             formStarted = false;
             if (selectedTariffName) {
-                selectedTariffName.textContent = 'Получить даты и адрес';
+                selectedTariffName.textContent = 'Забронировать место без оплаты';
             }
         } catch (error) {
             const errorText = error instanceof DOMException && error.name === 'AbortError'
@@ -143,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.clearTimeout(timeoutId);
             if (submitButton instanceof HTMLButtonElement) {
                 submitButton.disabled = false;
-                submitButton.textContent = 'Получить даты и адрес';
+                submitButton.textContent = 'Отправить заявку на участие';
             }
         }
     });
