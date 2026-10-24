@@ -45,7 +45,7 @@
             <div class="meta-grid">
                 <div class="meta-card">
                     <strong>Дата</strong>
-                    7 или 21 ноября 2026, суббота. Количество мест не публикуем без подтверждения.
+                    7 или 21 ноября 2026, суббота. Количество мест ограничено.
                 </div>
                 <div class="meta-card">
                     <strong>Время</strong>
